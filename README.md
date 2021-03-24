@@ -8,3 +8,19 @@ Environment:
 Tools:
 - vscode
 - Docker
+
+Business:
+CRUD for a fleet of vehicles.
+
+[Vehicle]
+- chassis[string];
+- category: Truck | Bus;
+- passengers[byte]:
+    - Truck = 2;
+    - Bus = 42;
+- color[string];
+
+Rules:
+- Make tests;
+- To use inheritance;
+- To make use of interfaces;
