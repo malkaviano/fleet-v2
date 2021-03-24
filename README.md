@@ -1,3 +1,5 @@
+[![CodeFactor](https://www.codefactor.io/repository/github/malkaviano/fleet-v2/badge/main)](https://www.codefactor.io/repository/github/malkaviano/fleet-v2/overview/main)
+
 # Fleet
 Sample App in .net Core
 
