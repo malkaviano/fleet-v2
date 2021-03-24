@@ -1,44 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Business
 {
     public abstract class Vehicle
     {
-        private string chassis;
+        [Required]
+        public string Chassis { get; protected set; }
 
-        public string Chassis
-        {
-            get { return this.chassis; }
-            protected set
-            {
-                if (value is null)
-                {
-                    throw new Exception("Chassis cannot be null");
-                }
+        [Required]
+        public string Color { get; set; }
 
-                this.chassis = value;
-            }
-        }
-
-        private string color;
-
-        public string Color
-        {
-            get { return this.color; }
-            set
-            {
-                if (value is null)
-                {
-                    throw new Exception("Color cannot be null");
-                }
-
-                this.color = value;
-            }
-        }
-
+        [Required]
         public VehicleCategory Category { get; protected set; }
 
+        [Required]
         public byte Passenger { get; protected set; }
     }
 }

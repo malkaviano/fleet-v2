@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System;
 using Business;
 using Xunit;
 using Repo;
@@ -11,7 +10,7 @@ namespace Tests
         [Fact]
         public void AddVehicleReturnsVehicle()
         {
-            var bus = new Bus("xpto", "red");
+            var bus = VehicleFactory.create("xpto", "red", VehicleCategory.BUS);
 
             var repo = new MemoryRepo();
 
@@ -23,7 +22,7 @@ namespace Tests
         [Fact]
         public void AddVehicleTwiceReturnsUpdatedVehicle()
         {
-            var bus = new Bus("xpto", "red");
+            var bus = VehicleFactory.create("xpto", "red", VehicleCategory.TRUCK);
 
             var repo = new MemoryRepo();
 
@@ -41,8 +40,8 @@ namespace Tests
         {
             var repo = new MemoryRepo();
 
-            var bus = new Bus("xpto", "red");
-            var truck = new Truck("some", "blue");
+            var bus = VehicleFactory.create("xpto", "red", VehicleCategory.BUS);
+            var truck = VehicleFactory.create("some", "blue", VehicleCategory.TRUCK);
 
             repo.Add(bus);
             repo.Add(truck);
@@ -83,7 +82,7 @@ namespace Tests
         {
             var repo = new MemoryRepo();
 
-            var bus = new Bus("xpto", "red");
+            var bus = VehicleFactory.create("xpto", "red", VehicleCategory.BUS);
 
             repo.Add(bus);
 

@@ -5,7 +5,7 @@ namespace Business
 {
     public class Bus : Vehicle
     {
-        public Bus(string chassis, string color)
+        internal Bus(string chassis, string color)
         {
             this.Chassis = chassis;
             this.Color = color;
