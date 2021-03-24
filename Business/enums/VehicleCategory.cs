@@ -4,7 +4,7 @@ namespace Business
 {
     public enum VehicleCategory
     {
-        TRUCK,
+        TRUCK = 1,
         BUS
     }
 }

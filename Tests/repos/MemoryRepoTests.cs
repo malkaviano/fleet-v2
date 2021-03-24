@@ -10,7 +10,7 @@ namespace Tests
         [Fact]
         public void AddVehicleReturnsVehicle()
         {
-            var bus = VehicleFactory.create("xpto", "red", VehicleCategory.BUS);
+            var bus = VehicleFactory.Create("xpto", "red", VehicleCategory.BUS);
 
             var repo = new MemoryRepo();
 
@@ -22,7 +22,7 @@ namespace Tests
         [Fact]
         public void AddVehicleTwiceReturnsUpdatedVehicle()
         {
-            var bus = VehicleFactory.create("xpto", "red", VehicleCategory.TRUCK);
+            var bus = VehicleFactory.Create("xpto", "red", VehicleCategory.TRUCK);
 
             var repo = new MemoryRepo();
 
@@ -40,8 +40,8 @@ namespace Tests
         {
             var repo = new MemoryRepo();
 
-            var bus = VehicleFactory.create("xpto", "red", VehicleCategory.BUS);
-            var truck = VehicleFactory.create("some", "blue", VehicleCategory.TRUCK);
+            var bus = VehicleFactory.Create("xpto", "red", VehicleCategory.BUS);
+            var truck = VehicleFactory.Create("some", "blue", VehicleCategory.TRUCK);
 
             repo.Add(bus);
             repo.Add(truck);
@@ -82,7 +82,7 @@ namespace Tests
         {
             var repo = new MemoryRepo();
 
-            var bus = VehicleFactory.create("xpto", "red", VehicleCategory.BUS);
+            var bus = VehicleFactory.Create("xpto", "red", VehicleCategory.BUS);
 
             repo.Add(bus);
 

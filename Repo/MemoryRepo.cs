@@ -18,7 +18,7 @@ namespace Repo
 
         public Vehicle Add(Vehicle vehicle)
         {
-            var current = this.findByChassis(vehicle.Chassis);
+            var current = this.FindByChassis(vehicle.Chassis);
 
             if (current == null)
             {
@@ -28,14 +28,14 @@ namespace Repo
                 current.Color = vehicle.Color;
             }
 
-            return this.findByChassis(vehicle.Chassis);
+            return this.FindByChassis(vehicle.Chassis);
         }
 
         public IEnumerable<Vehicle> List() => this.repo;
 
         public Vehicle Remove(string chassis)
         {
-            var current = this.findByChassis(chassis);
+            var current = this.FindByChassis(chassis);
 
             if (this.repo.Remove(current))
             {
@@ -45,7 +45,7 @@ namespace Repo
             return null;
         }
 
-        private Vehicle findByChassis(string chassis) =>
+        public Vehicle FindByChassis(string chassis) =>
             this.repo.SingleOrDefault(v => v.Chassis == chassis);
     }
 }

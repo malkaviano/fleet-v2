@@ -16,5 +16,15 @@ namespace Business
 
         [Required]
         public byte Passenger { get; protected set; }
+
+        public override string ToString()
+        {
+            return $@"
+                Chassis: {this.Chassis}
+                Color: {this.Color}
+                Passengers: {this.Passenger}
+                Category: {(this.Category == VehicleCategory.TRUCK ? "Truck" : "Bus")}
+            ";
+        }
     }
 }

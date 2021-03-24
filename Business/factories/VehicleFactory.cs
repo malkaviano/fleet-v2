@@ -7,7 +7,7 @@ namespace Business
 {
     public class VehicleFactory
     {
-        static public Vehicle create(
+        static public Vehicle Create(
             string chassis,
             string color,
             VehicleCategory category

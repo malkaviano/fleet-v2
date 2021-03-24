@@ -12,7 +12,7 @@ namespace Tests
         {
             var factory = new VehicleFactory();
 
-            var vehicle = VehicleFactory.create("some", "blue", VehicleCategory.TRUCK);
+            var vehicle = VehicleFactory.Create("some", "blue", VehicleCategory.TRUCK);
 
             /*
                 Why not implement the object Equals?
@@ -24,7 +24,7 @@ namespace Tests
             Assert.Equal(VehicleCategory.TRUCK, vehicle.Category);
             Assert.Equal(2, vehicle.Passenger);
 
-            vehicle = VehicleFactory.create("xpto", "red", VehicleCategory.BUS);
+            vehicle = VehicleFactory.Create("xpto", "red", VehicleCategory.BUS);
 
             Assert.Equal("xpto", vehicle.Chassis);
             Assert.Equal("red", vehicle.Color);
@@ -36,14 +36,14 @@ namespace Tests
         public void CreateAVehicleFailWhenChassisIsNull()
         {
             Assert.Throws<Exception>(
-                () => { VehicleFactory.create(null, "green", VehicleCategory.BUS); });
+                () => { VehicleFactory.Create(null, "green", VehicleCategory.BUS); });
         }
 
         [Fact]
         public void CreateAVehicleFailWhenColorIsNull()
         {
             Assert.Throws<Exception>(
-                () => { VehicleFactory.create("good stuff", null, VehicleCategory.TRUCK); });
+                () => { VehicleFactory.Create("good stuff", null, VehicleCategory.TRUCK); });
         }
     }
 }
