@@ -7,7 +7,6 @@ Environment:
 
 Tools:
 - vscode
-- Docker
 
 Business:
 CRUD for a fleet of vehicles.
@@ -24,3 +23,5 @@ Rules:
 - Make tests;
 - To use inheritance;
 - To make use of interfaces;
+- Use and threat exceptions;
+- Use new sintax (lambdas and LINQ);

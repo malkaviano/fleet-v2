@@ -26,7 +26,7 @@ namespace Business
         public string Color
         {
             get { return this.color; }
-            protected set
+            set
             {
                 if (value is null)
                 {
